@@ -42,7 +42,7 @@ module.exports = {
     ]
     , plugins: [
         // build in plugin, not need to install
-          new webpack.BannerPlugin("[github.com/ApolloTang] [tang.apollo@gmail.com])
+          new webpack.BannerPlugin("[github.com/ApolloTang] [tang.apollo@gmail.com]")
         // To install: npm i -D html-webpack-plugin
         , new HtmlWebpackPlugin({ template: __dirname + "/app/index.tmpl.html" })
         // Also see file __dirname/.babalerc
