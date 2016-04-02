@@ -1,8 +1,0 @@
-toRun:
-    npm run dev
-
-to build:
-    npm run build
-
-entry file is at:
-    ./index.html
