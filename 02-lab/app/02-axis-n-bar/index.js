@@ -71,7 +71,7 @@ class Chart extends React.Component {
                             axis: {stroke: "black", strokeWidth: .5},
                             ticks: {stroke: "black", strokeWidth: 1.5},
                             tickLabels: {fontSize: 7},
-                            axisLabels: {fontSize: 7}, /* [BUG] can not set axisLable's fontsize */
+                            axisLabel: {fontSize: 10, fill:'red'}, /* [BUG] can not set axisLable's fontsize */
                         }}
                         label="Abscissa"
                         domain={[0,.8]}
