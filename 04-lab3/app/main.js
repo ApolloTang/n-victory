@@ -8,5 +8,7 @@ import './main.less';
 // import SimpleBar from './01-simple-bar/';
 // render( <SimpleBar />, document.getElementById('root'));
 
-import Component from './02-axis-n-bar/';
+// import Component from './02-axis-n-bar/';
+import Component from './03-animation/';
+
 render( <Component />, document.getElementById('root'));
