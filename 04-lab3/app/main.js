@@ -10,6 +10,17 @@ import './main.less';
 
 // import Component from './02-axis-n-bar/';
 // import Component from './03-animation/';
-import Component from './04-animation-demo/';
+
+
+// // Demo from:
+// // http://formidable.com/open-source/victory/docs/victory-bar Fig. 10
+// // this animation is done using victoryGroup
+// import Component from './04-animation-demo/';
+
+
+// Demo from:
+// http://formidable.com/open-source/victory/docs/victory-chart Fig.8
+// this animation is done using victoryChart
+import Component from './05-animation-demo2/';
 
 render( <Component />, document.getElementById('root'));
