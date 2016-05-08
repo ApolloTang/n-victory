@@ -3,9 +3,11 @@ console.log('xxx test: ', test);
 
 import React, {Component} from 'react'
 
-import {
-    VictoryAnimation
-} from 'victory'
+// import {
+//     VictoryAnimation
+// } from 'victory'
+
+import VictoryAnimation from 'vendor/victory-core/src/victory-animation/victory-animation.js'
 
 import styles from  './index.less'
 
