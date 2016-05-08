@@ -14,7 +14,8 @@ This is playground for FormidableLabs's victory: https://github.com/FormidableLa
 
  - 04-lab3 (a playground to experiment)
 
-        Include victory-chart separately outside node_module so I experiment with changes
+        Include victory library separately outside node_module so I experiment with changes
+
 
 ### Installation
 
