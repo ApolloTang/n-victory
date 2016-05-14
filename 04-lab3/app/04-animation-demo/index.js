@@ -12,8 +12,8 @@ import React, {Component} from 'react'
 
 import VictoryAnimation from 'vendor/victory-core/src/victory-animation/victory-animation.js'
 
-import VictoryBar       from 'vendor/victory-chart/src/components/victory-bar/victory-bar.jsx'
-import VictoryGroup     from 'vendor/victory-chart/src/components/victory-group/victory-group.jsx'
+import VictoryBar       from 'vendor/victory-chart/src/components/victory-bar/victory-bar.js'
+import VictoryGroup     from 'vendor/victory-chart/src/components/victory-group/victory-group.js'
 
 import styles from  './index.less'
 
