@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import test from 'vendor/t/';
-console.log('xxx test: ', test);
 
 import React, {Component} from 'react'
 
@@ -14,7 +13,6 @@ import VictoryAxis from 'vendor/victory-chart/src/components/victory-axis/victor
 import VictoryBar from 'vendor/victory-chart/src/components/victory-bar/victory-bar.js'
 
 import styles from  './index.less'
-
 
 class Chart extends React.Component {
     render() {
@@ -137,76 +135,45 @@ export default class extends Component {
         this.data1 = this.data1.bind(this);
         this.data2 = this.data2.bind(this);
         this.state = {
-            z: 0,
             bars: []
         }
     }
     data1() {
-        console.log('data1')
         this.setState({
             data: {
-                // z: 10,
                 bars: [
                     {x: 0,   y: 50},
-                    {x: 20,  y: 40},
-                    {x: 30,  y: 1},
-                    {x: 40,  y: 20},
-                    {x: 50,  y: 0},
-                    {x: 60,  y: 40},
+                    {x: 40,  y: 10},
                     {x: 80,  y: 50}
                 ]
             }
         });
     }
     data2() {
-        console.log('data2')
         this.setState({
             data: {
-                // z: 20,
                 bars: [
-                    {x: 0,   y: 0},
-                    {x: 20,  y: 30},
-                    {x: 30,  y: 1},
-                    {x: 40,  y: 40},
-                    {x: 50,  y: 0},
-                    {x: 60,  y: 30},
-                    {x: 80,  y: 0}
+                    {x: 0,   y: 10},
+                    {x: 40,  y: 50},
+                    {x: 80,  y: 10},
                 ]
             }
         });
     }
     render() {
-        // console.log('this.state: ', this.state.data)
         const data = this.state.data || [];
-        // const data = [
-        //   { x: 0 },
-        //   { x: 10},
-        // ]
-
-        // const data = {
-        //     data:[
-        //         {x: 0,   y: 50},
-        //         {x: 20,  y: 40},
-        //         {x: 30,  y: 1},
-        //         {x: 40,  y: 20},
-        //         {x: 50,  y: 0},
-        //         {x: 60,  y: 40},
-        //         {x: 80,  y: 50}
-        //     ]
-        // }
-        //<Chart data={data} />
         return (
             <div>
-                <VictoryAnimation data={data} duration={200}>
+                <VictoryAnimation data={data} duration={1000}>
                     {
                         (data) => {
+                            if ( data && data.length === 0) { return (<div>...loading</div>); }
                             console.log(JSON.stringify(data));
                             return (
                                 <div>
-                                <Chart data={_.get(data, `bars`, [])} />
-
+                                    <Chart data={_.get(data, `bars`, [])} />
                                 </div>
-                                );
+                            );
                         }
                     }
                 </VictoryAnimation>
