@@ -111,7 +111,7 @@ const Comp =  class extends React.Component {
                   }
                 }
               },
-              onEnd: {
+              onEnter: {
                 duration: 500,
                 before: () => {
                   console.log('onEnter, before');

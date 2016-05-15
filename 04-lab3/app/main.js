@@ -21,6 +21,6 @@ import './main.less';
 // Demo from:
 // http://formidable.com/open-source/victory/docs/victory-chart Fig.8
 // this animation is done using victoryChart
-import Component from './05-animation-demo2/';
+import Component from './05-animation-exit-enter/';
 
 render( <Component />, document.getElementById('root'));
