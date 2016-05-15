@@ -33,9 +33,9 @@ const Comp =  class extends React.Component {
     console.log('data1')
     this.setState({
       data: [
-        {x: 0,   y: 50},
-        {x: 40,  y: 10},
-        {x: 80,  y: 50}
+        {x: 0,   y: 50, key:'0'},
+        {x: 40,  y: 10, key:'4'},
+        {x: 80,  y: 50, key:'8'}
       ]
     });
   }
@@ -44,10 +44,10 @@ const Comp =  class extends React.Component {
     console.log('data2')
     this.setState({
       data: [
-        {x: 0,   y: 10},
-        {x: 40,  y: 50},
-        {x: 80,  y: 10},
-        {x: 50,  y: 10},
+        {x: 0,   y: 10, key:'0'},
+        {x: 40,  y: 50, key:'4'},
+        {x: 50,  y: 10, key:'5'},
+        {x: 80,  y: 10, key:'8'},
       ]
     });
   }
@@ -56,8 +56,8 @@ const Comp =  class extends React.Component {
     console.log('data3')
     this.setState({
       data: [
-        {x: 0,   y: 10},
-        {x: 40,  y: 50},
+        {x: 0,   y: 10, key:'0'},
+        {x: 40,  y: 50, key:'4'},
       ]
     });
   }
@@ -83,8 +83,7 @@ const Comp =  class extends React.Component {
   render() {
     return (
       <div>
-        <VictoryGroup height={500}
-          animate={{duration: 1000}}>
+        <VictoryGroup height={500}>
           <VictoryBar
             data={this.state.data}
             style={{
@@ -93,6 +92,7 @@ const Comp =  class extends React.Component {
               }
             }}
             animate={{
+              duration: 1000,
               onExit: {
                 duration: 500,
                 before: () => {
